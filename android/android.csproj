@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFrameworks>net6.0;net8.0;net9.0;net10.0</TargetFrameworks>
     <RootNamespace>ReqnrollAppiumBrowserStack</RootNamespace>
     <AssemblyName>ReqnrollAppiumBrowserStack</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -14,10 +14,9 @@
     <!-- BrowserStack SDK: instruments the test runner and routes the Appium
          session to the BrowserStack cloud using android/browserstack.yml. -->
     <PackageReference Include="BrowserStack.TestAdapter" Version="0.*" />
-    <PackageReference Include="BrowserStackLocal" Version="2.0.0" />
 
     <!-- Test + BDD frameworks -->
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="Reqnroll.NUnit" Version="3.2.1" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />

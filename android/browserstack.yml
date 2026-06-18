@@ -12,14 +12,15 @@ accessKey: YOUR_ACCESS_KEY
 projectName: BrowserStack Samples
 buildName: appauto-reqnroll-nunit-appium
 buildIdentifier: '#${BUILD_NUMBER}'
-# `framework` lets the SDK send test context (name, status) to BrowserStack.
-framework: reqnroll
+# NOTE: no `framework:` key — the C# SDK auto-detects the framework from the
+# installed NuGet package (Reqnroll.NUnit), or via the BROWSERSTACK_FRAMEWORK env var.
 
 # ==========================================
 # Application under test
 # ==========================================
-# Pre-uploaded WikipediaSample.apk on BrowserStack (use this bs:// url verbatim).
-app: bs://92d48b416632f2b1734259565ceab61b05ad0b24
+# Public sample app committed in this repo (relative path); the SDK uploads it at run time,
+# so the sample runs out of the box on any account. Local test: override BROWSERSTACK_APP=./LocalSample.apk.
+app: ./WikipediaSample.apk
 
 # =======================================
 # Platforms (Devices to test)
@@ -34,7 +35,7 @@ platforms:
 # =======================
 parallelsPerPlatform: 1
 
-source: reqnroll-nunit-appium-app-browserstack:sample-sdk:v1.0
+source: reqnroll:appium-sample-sdk:v1.0
 
 # ======================
 # Test Observability

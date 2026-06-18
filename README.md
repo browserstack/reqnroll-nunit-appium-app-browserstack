@@ -10,16 +10,16 @@ to the BrowserStack cloud — no changes to your test logic are required.
 ## Prerequisites
 
 - A [BrowserStack account](https://www.browserstack.com/users/sign_up) (username + access key).
-- [.NET SDK](https://dotnet.microsoft.com/download) 8.0 (net6.0+ is supported).
-- The sample app is the public **WikipediaSample.apk**, pre-uploaded to BrowserStack and referenced in
-  `android/browserstack.yml` as a `bs://` URL. To use your own build, upload it via the
-  [App Automate upload API](https://www.browserstack.com/app-automate/rest-api) and replace the `app:` value.
+- [.NET SDK](https://dotnet.microsoft.com/download) — net6.0 / net8.0 / net9.0 / net10.0 (the project multi-targets these).
+- The sample app is the public **WikipediaSample.apk**, committed in `android/` and referenced by relative
+  path (`app: ./WikipediaSample.apk`) — the SDK uploads it at run time, so the sample works on any account.
+  To use your own build, replace the `app:` value (or set `BROWSERSTACK_APP`).
 
 ## Setup
 
 ```bash
 git clone <this-repo>
-cd reqnroll-nunit-appium
+cd reqnroll-nunit-appium-app-browserstack
 
 # Configure credentials (either edit browserstack.yml or export env vars)
 export BROWSERSTACK_USERNAME="YOUR_USERNAME"
