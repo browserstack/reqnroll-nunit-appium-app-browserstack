@@ -10,7 +10,7 @@ to the BrowserStack cloud — no changes to your test logic are required.
 ## Prerequisites
 
 - A [BrowserStack account](https://www.browserstack.com/users/sign_up) (username + access key).
-- [.NET SDK](https://dotnet.microsoft.com/download) — net6.0 / net8.0 / net9.0 / net10.0 (the project multi-targets these).
+- [.NET SDK](https://dotnet.microsoft.com/download) 8.0 (this sample targets `net8.0`; the CI workflow tests on 8.0.x).
 - The sample app is the public **WikipediaSample.apk**, committed in `android/` and referenced by relative
   path (`app: ./WikipediaSample.apk`) — the SDK uploads it at run time, so the sample works on any account.
   To use your own build, replace the `app:` value (or set `BROWSERSTACK_APP`).
