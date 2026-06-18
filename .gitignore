@@ -1,0 +1,21 @@
+# .NET build output
+bin/
+obj/
+*.user
+
+# Reqnroll / test artifacts
+TestResults/
+*.feature.cs
+
+# BrowserStack SDK logs
+log/
+local.log
+*.log
+
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# Credentials (never commit)
+.bstack.env

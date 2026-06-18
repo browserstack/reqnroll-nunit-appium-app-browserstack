@@ -1,0 +1,49 @@
+# =============================
+# Set BrowserStack Credentials
+# =============================
+# Add your BrowserStack userName and accessKey here or set BROWSERSTACK_USERNAME and
+# BROWSERSTACK_ACCESS_KEY as env variables.
+userName: YOUR_USERNAME
+accessKey: YOUR_ACCESS_KEY
+
+# ======================
+# BrowserStack Reporting
+# ======================
+projectName: BrowserStack Samples
+buildName: appauto-reqnroll-nunit-appium
+buildIdentifier: '#${BUILD_NUMBER}'
+# NOTE: no `framework:` key — the C# SDK auto-detects the framework from the
+# installed NuGet package (Reqnroll.NUnit), or via the BROWSERSTACK_FRAMEWORK env var.
+
+# ==========================================
+# Application under test
+# ==========================================
+# Public sample app committed in this repo (relative path); the SDK uploads it at run time,
+# so the sample runs out of the box on any account. Local test: override BROWSERSTACK_APP=./LocalSample.apk.
+app: ./WikipediaSample.apk
+
+# =======================================
+# Platforms (Devices to test)
+# =======================================
+platforms:
+  - deviceName: Samsung Galaxy S22 Ultra
+    osVersion: "12.0"
+    platformName: android
+
+# =======================
+# Parallels per Platform
+# =======================
+parallelsPerPlatform: 1
+
+source: reqnroll:appium-sample-sdk:v1.0
+
+# ======================
+# Test Observability
+# ======================
+testObservability: true
+
+# ===================
+# Debugging features
+# ===================
+debug: true
+networkLogs: true
